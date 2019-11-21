@@ -39,7 +39,7 @@ while(flag==1)
         if beta/(q'*q)<tol2
             if beta<=0
                 disp('Matrix A is not positive definite!');
-                flag=0;
+                flag=-1;
                 break;
             end
             disp('Matrix A is ill conditioned');
@@ -72,6 +72,7 @@ while(flag==1)
         end
         p=z+(rho_new/rho)*p;
     end
+    flag=-1;
 end
 x_0=x_0+dx;
 toc;
