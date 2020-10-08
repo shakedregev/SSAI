@@ -12,7 +12,6 @@ C=diag(sparse(1./sqrt(diag(A))));
 A=C*tril(A,-1)*C;
 A=A+A'+speye(n);
 %% solution setup
-b=sparse(A*(1:n)'/n);
 tol=tol*norm(b);
 %% sparse inverse
 lfil=ceil(nnz(A)/n);
