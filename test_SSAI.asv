@@ -3,7 +3,7 @@ clear all;
 load('cvxbqp1.mat');
 A=Problem.A;
 n=length(A);
-b=A*(1:n)'/n;
+%b=A*(1:n)'/n;
 x_0=zeros(n,1);
 tol=1e-8;
 [x,err,res,iter]=SSAI_PCG(A,b,x_0,tol);
