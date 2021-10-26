@@ -11,6 +11,7 @@ n=length(A);
 C=diag(sparse(1./sqrt(diag(A))));
 A=C*tril(A,-1)*C;
 A=A+A'+speye(n);
+b=C*b;
 %% solution setup
 tol=tol*norm(b);
 %% sparse inverse
@@ -77,4 +78,5 @@ iter=niter+waste_iter;
 res=A*x_0-b;
 err=norm(res);
 disp(count);
+x_0=C*x_0;
 end
