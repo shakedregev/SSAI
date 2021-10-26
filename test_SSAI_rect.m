@@ -1,6 +1,6 @@
 %% load matrix
 clear all;
-load('ch8-8-b5.mat');
+load('ch8-8-b3.mat');
 %% problem setup
 A=Problem.A;
 onnz=nnz(A);
@@ -26,6 +26,6 @@ toc;
 %% SPCGLS
 tic;
 [x,iter,flag]=spcgls(A*C,b,tol*norm(b),nmax,M);
+x=C*x;
 toc;
 disp(iter)
-
