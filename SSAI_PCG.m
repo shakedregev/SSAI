@@ -27,7 +27,7 @@ tic;
 flag=1;
 count=0;
 while(flag==1)
-    dx=spalloc(n,1,n);
+    dx=zeros(n,1);
     r=b-A*x_0;
     z=M*r;
     p=z;
