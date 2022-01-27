@@ -12,7 +12,7 @@ flag=2;
 waste_iter=0;
 while(flag==2)
     r=b-A*x0;
-    x=spalloc(n,1,n);
+    x=zeros(n,1);
     t=At*r;
     norm0=norm(t);
     tol=tol*norm0;
